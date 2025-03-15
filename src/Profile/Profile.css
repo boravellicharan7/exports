@@ -1,0 +1,295 @@
+/* Base styles */
+:root {
+  --primary-color: rgb(176, 156, 53);
+  --accent-color: #f7b733;
+  --text-color: #333333;
+  --light-gray: #f5f5f5;
+  --medium-gray: #e0e0e0;
+  --dark-gray: #707070;
+  --section-padding: 2rem;
+  --section-margin: 2rem 0;
+  --border-radius: 6px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: #ffffff;
+}
+
+h2, h3, h4 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Profile Container */
+.profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main Content */
+.profile-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+/* Section Styles */
+.section {
+  background-color: #ffffff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: var(--section-padding);
+  margin: var(--section-margin);
+}
+
+.section-title {
+  color: var(--primary-color);
+  font-size: 1.75rem;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  border-bottom: 1px solid var(--medium-gray);
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background-color: var(--accent-color);
+}
+
+/* User Info Section */
+.user-info {
+  margin-top: 0;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.user-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-color);
+}
+
+.user-text {
+  text-align: center;
+}
+
+.user-name {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.user-designation {
+  font-size: 1.1rem;
+  color: var(--dark-gray);
+  margin-bottom: 1rem;
+}
+
+.user-bio {
+  line-height: 1.7;
+}
+
+/* Company Info Section */
+.company-about h3 {
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.company-about h3:first-child {
+  margin-top: 0;
+}
+
+/* Services Section */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.service-card {
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--medium-gray);
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.service-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+/* Footer Styles */
+footer {
+  margin-top: 2rem;
+  padding: 1.5rem 1rem;
+  background-color: var(--light-gray);
+}
+
+footer h4 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+}
+
+footer .flex {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.75rem;
+  justify-content: center;
+}
+
+/* Media Queries */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .user-details {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+  }
+  
+  .user-text {
+    text-align: left;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 2.5rem;
+  }
+  
+  .user-image {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .user-name {
+    font-size: 1.75rem;
+  }
+  
+  .user-designation {
+    font-size: 1.2rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  footer {
+    padding: 2rem;
+  }
+  
+  footer .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .profile-main {
+    padding: 3rem 0;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .user-image {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .section {
+    padding: 3rem;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .profile-container {
+    padding: 0 2rem;
+  }
+  
+  .section-title {
+    font-size: 2.25rem;
+  }
+  
+  .user-bio, .company-about p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .profile-container {
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  .section {
+    box-shadow: none;
+    border: 1px solid #ddd;
+    page-break-inside: avoid;
+  }
+  
+  .service-card {
+    break-inside: avoid;
+  }
+  
+  footer {
+    display: none;
+  }
+}

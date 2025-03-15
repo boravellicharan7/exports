@@ -1,0 +1,365 @@
+main {
+    margin-top: 30px;
+    padding: 40px;
+    /* place-items: center; */
+}
+
+.BodyContainer1 {
+    place-items: center;
+}
+
+.BodyContainer1 h1 {
+    font-weight: bolder;
+}
+
+.BodyContainer1Child1 {
+    width: 7%;
+    height: 1vh;
+    background-color: rgb(176, 156, 53);
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.BodyContainer1Child2 {
+    margin-top: 35px;
+    width: 40%;
+    text-align: center;
+}
+
+.BodyContainer2 {
+    /* opacity: 0.8; */
+    margin-top: 60px;
+    height: 80vh;
+    background-position: "center";
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 0px; */
+    justify-content: space-between;
+    place-items: center;
+    transition: background-image 0.5s ease-in-out;
+    /* background: transparent; */
+}
+
+.BodyContainer2Child {
+    place-items: center;
+    text-align: center;
+    color: whitesmoke;
+    width: 19.5%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.342);
+}
+
+.BodyContainer3 {
+    margin-top: 60px;
+    place-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.links {
+    border-radius: 30px;
+    border: 2px solid black;
+    padding: 10px 30px;
+    color: black;
+    background: transparent;
+    text-decoration: none; 
+    cursor: pointer; 
+    transition: all 0.3s ease-in-out; 
+}
+
+.links:hover {
+    background: black;
+    color: white;
+}
+
+
+.BodyContainer4 {
+    margin-top: 60;
+    padding: 40px;
+}
+
+.carousel-indicators {
+    display: flex;
+    gap: 20px;
+}
+
+.carousel-indicators button {
+    background: transparent;
+    border: none;
+}
+
+.carousel-control-prev {
+    border: none;
+    background: transparent;
+    filter: invert(41%) sepia(47%) saturate(391%) hue-rotate(9deg) brightness(100%) contrast(100%);
+}
+
+.carousel-control-next {
+    border: none;
+    background: transparent;
+    filter: invert(41%) sepia(47%) saturate(391%) hue-rotate(7deg) brightness(95%) contrast(93%);
+}
+
+.BodyContainer5 {
+    place-items: center;
+    margin-top: 30px;
+}
+
+.BodyContainer5 h1 {
+    font-weight: bolder;
+    ;
+}
+
+.BodyContainer5Child1 {
+    /* margin-top: 60px; */
+    width: 7%;
+    height: 1vh;
+    background-color: rgb(176, 156, 53);
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.BodyContainer5Child2 {
+    margin-top: 35px;
+    width: 40%;
+    text-align: center;
+}
+
+.BodyContainer5Child3 {
+    margin-top: 35px;
+    width: 40%;
+    text-align: center;
+}
+
+.carousel-inner{
+    padding: 20px;
+}
+
+.BodyContainer7 {
+    background-image: url("../assets/oceanshipcontainer.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 30px;
+    display: grid;
+    justify-content: center;
+    place-items: center;
+    /* text-align: center; */
+    padding: 25px;
+    width: 100%;
+    height: 75vh;
+}
+
+.BodyContainer7 h1 {
+    font-weight: bolder;
+    color: whitesmoke;
+}
+
+.BodyContainer7Child1 {
+    width: 7%;
+    height: 1vh;
+    background-color: rgb(176, 156, 53);
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.BodyContainer7Child2 {
+    margin-top: 35px;
+    color: whitesmoke;
+    width: 40%;
+    text-align: center;
+}
+
+.BodyContainer7Child2 button {
+    margin-top: 10px;
+    border-radius: 30px;
+    border: 1px solid black;
+    padding: 10px;
+    width: 50%;
+    background: transparent;
+}
+
+.BodyContainer7Child3 {
+    margin-top: 15px;
+}
+
+.BodyContainer8 {
+    margin-top: 30px;
+    place-items: center;
+    padding: 30px;
+    background-color: rgba(128, 128, 128, 0.441);
+}
+
+.BodyContainer8 h1 {
+    font-weight: bolder;
+}
+
+.BodyContainer8Child1 {
+    width: 7%;
+    height: 1vh;
+    background-color: rgb(176, 156, 53);
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.BodyContainer8Child2 {
+    margin-top: 30px;
+}
+
+/* Default styles apply to large screens (desktops) */
+
+/* Tablets and smaller desktops (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    main {
+        margin-top: 20px;
+        padding: 30px;
+    }
+
+    .BodyContainer1Child1,
+    .BodyContainer5Child1,
+    .BodyContainer7Child1,
+    .BodyContainer8Child1 {
+        width: 10%;
+    }
+
+    .BodyContainer1Child2,
+    .BodyContainer5Child2,
+    .BodyContainer5Child3,
+    .BodyContainer7Child2 {
+        width: 60%;
+    }
+
+    .BodyContainer2 {
+        height: 90vh;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .BodyContainer2Child {
+        width: 45%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .links {
+        /* width: 30%; */
+        padding: 12px;
+    }
+
+    .BodyContainer7 {
+        height: 60vh;
+        padding: 20px;
+    }
+
+    .BodyContainer7Child2 button {
+        width: 60%;
+    }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    main {
+        margin-top: 15px;
+        padding: 20px;
+    }
+
+    .BodyContainer1 h1,
+    .BodyContainer5 h1,
+    .BodyContainer7 h1,
+    .BodyContainer8 h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .BodyContainer1Child1,
+    .BodyContainer5Child1,
+    .BodyContainer7Child1,
+    .BodyContainer8Child1 {
+        width: 15%;
+    }
+
+    .BodyContainer1Child2,
+    .BodyContainer5Child2,
+    .BodyContainer5Child3,
+    .BodyContainer7Child2 {
+        width: 80%;
+        text-align: center;
+    }
+
+    .BodyContainer2 {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .BodyContainer2Child {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .BodyContainer3 {
+        flex-direction: column;
+    }
+
+    .links {
+        /* width: 50%; */
+        padding: 12px;
+    }
+
+    .BodyContainer7 {
+        height: auto;
+        padding: 15px;
+    }
+
+    .BodyContainer7Child2 button {
+        width: 80%;
+    }
+}
+
+/* Extra small screens (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    main {
+        margin-top: 10px;
+        padding: 15px;
+    }
+
+    .BodyContainer1 h1,
+    .BodyContainer5 h1,
+    .BodyContainer7 h1,
+    .BodyContainer8 h1 {
+        font-size: 1.2rem;
+    }
+
+    .BodyContainer1Child1,
+    .BodyContainer5Child1,
+    .BodyContainer7Child1,
+    .BodyContainer8Child1 {
+        width: 20%;
+    }
+
+    .BodyContainer1Child2,
+    .BodyContainer5Child2,
+    .BodyContainer5Child3,
+    .BodyContainer7Child2 {
+        width: 90%;
+    }
+
+    .links {
+        width: 70%;
+        padding: 10px;
+    }
+
+    .BodyContainer7 {
+        height: auto;
+        padding: 10px;
+    }
+
+    .BodyContainer7Child2 button {
+        width: 90%;
+    }
+
+    .links{
+        width: 100%;
+    }
+}       

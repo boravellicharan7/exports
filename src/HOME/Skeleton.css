@@ -1,0 +1,95 @@
+/* SkeletonStyle.css */
+
+/* Base animation for all skeleton elements */
+@keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+  
+  /* Shared styles for all skeleton elements */
+  .skeleton-line,
+  .skeleton-image,
+  .skeleton-logo,
+  .skeleton-carousel-image {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite linear;
+    border-radius: 4px;
+  }
+  
+  /* Cards skeletons */
+  .skeleton-card {
+    height: 180px;
+  }
+  
+  .skeleton-date {
+    height: 24px;
+    width: 80px;
+    margin-bottom: 12px;
+  }
+  
+  .skeleton-title {
+    height: 28px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .skeleton-description {
+    height: 16px;
+    width: 90%;
+    margin-bottom: 10px;
+  }
+  
+  /* Slides skeletons */
+  .skeleton-slide {
+    min-height: 320px;
+  }
+  
+  .skeleton-image {
+    height: 200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .skeleton-title-small {
+    height: 22px;
+    width: 60%;
+    margin: 0 auto 12px;
+  }
+  
+  .skeleton-description-small {
+    height: 16px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  /* Solutions skeletons */
+  .skeleton-solution {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    transition: transform 0.3s;
+  }
+  
+  .skeleton-logo {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  /* Carousel skeleton */
+  .skeleton-carousel {
+    min-height: 300px;
+  }
+  
+  .skeleton-carousel-image {
+    height: 250px;
+    width: 100%;
+  }

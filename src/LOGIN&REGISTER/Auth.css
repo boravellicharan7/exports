@@ -1,0 +1,501 @@
+/* ====== General Styles ====== */
+
+.authPageContainer {
+    background: url('src/assets/login.jpg') center/cover no-repeat;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ====== Left Brand Section ====== */
+.brandSection {
+    width: 40%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 2rem;
+}
+
+.brandSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.667);
+}
+
+.brandContent {
+    place-items: center;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    max-width: 80%;
+}
+
+.brandLogo {
+    width: 160px;
+    filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.6));
+    margin-bottom: 1rem;
+}
+
+.companyName {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.brandTagline {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-weight: 300;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* ====== Right Form Section ====== */
+.formSection {
+    /* margin-top: 60px; */
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.667);
+    color: whitesmoke;
+}
+
+.formContainer {
+    width: 450px;
+    max-width: 100%;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.formTitle {
+    font-size: 1.8rem;
+    font-weight: 600;
+    /* color: #333; */
+    margin-bottom: 6px;
+}
+
+.formBar {
+    width: 50px;
+    height: 4px;
+    background: #b09c35;
+    border-radius: 2px;
+    margin-bottom: 12px;
+}
+
+/* .formSubtitle {
+    color: #666; 
+} */
+
+/* ====== Fade-in Animation ====== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ====== Form & Inputs ====== */
+.authForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* padding: 40px; */
+}
+
+.inputGroup {
+    margin-bottom: 1rem;
+    width: 90%;
+}
+
+.inputGroup label {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 500;
+    /* color: #444; */
+    margin-bottom: 6px;
+}
+
+.inputGroup input {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    /* background-color: #f9f9f9; */
+}
+
+.inputGroup input:focus {
+    outline: none;
+    border-color: #b09c35;
+    box-shadow: 0 0 0 2px rgba(176, 156, 53, 0.2);
+    /* background-color: #fff; */
+}
+
+.passwordWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.passwordWrapper input {
+    padding-right: 40px;
+}
+
+.eyeButton {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #666;
+}
+
+.eyeButton:hover {
+    color: #000;
+}
+
+/* ====== Buttons ====== */
+.button {
+    width: 90%;
+    padding: 7px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 6px;
+    border: none;
+}
+
+.loginButton,
+.registerButton {
+    background-color: #b09c35;
+    color: white;
+}
+
+.button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.alternateLoginOptions {
+    margin: 1rem 0;
+    width: 90%;
+    text-align: center;
+}
+
+.optionsDivider {
+    display: flex;
+    align-items: center;
+    color: #888;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+}
+
+.optionsDivider::before,
+.optionsDivider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+}
+
+.optionsDivider::before {
+    margin-right: 10px;
+}
+
+.optionsDivider::after {
+    margin-left: 10px;
+}
+
+.googleButton,
+.guestButton {
+    width: 80%;
+    padding: 7px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    background-color: white;
+    color: #333;
+}
+
+.googleButton:hover,
+.guestButton:hover {
+    background-color: #f5f5f5;
+}
+
+/* Switch Mode */
+.switchModeButton {
+    background: none;
+    border: none;
+    font-size: 0.9rem;
+    color: #b09c35;
+    /* margin-top: 1rem; */
+    cursor: pointer;
+    transition: 0.3s;
+    align-self: center;
+}
+
+.switchModeButton:hover {
+    text-decoration: underline;
+}
+
+/* ====== Popups & Alerts ====== */
+.alertPopup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #27ae60;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    animation: slideIn 0.5s ease-in-out;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.alertPopup.error {
+    background: #e74c3c;
+}
+
+.closeAlert {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 10px;
+    opacity: 0.8;
+}
+
+.closeAlert:hover {
+    opacity: 1;
+}
+
+/* Popup Slide-in Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ====== Responsive Design ====== */
+
+/* Large Laptop and Desktops (1200px and above) */
+@media (min-width: 1200px) {
+    .formContainer {
+        width: 480px;
+    }
+
+    .brandLogo {
+        width: 180px;
+    }
+
+    .companyName {
+        font-size: 2.8rem;
+    }
+}
+
+/* Standard Laptops (992px - 1199px) */
+@media (max-width: 1199px) {
+    .formContainer {
+        width: 420px;
+    }
+}
+
+/* Tablets and Small Laptops (768px - 991px) */
+@media (max-width: 991px) {
+    .brandSection {
+        width: 35%;
+    }
+
+    .formSection {
+        width: 65%;
+    }
+
+    .companyName {
+        font-size: 2.2rem;
+    }
+
+    .brandTagline {
+        font-size: 1.1rem;
+    }
+}
+
+/* Tablets (576px - 767px) */
+@media (max-width: 767px) {
+    .authPageContainer {
+        flex-direction: column;
+    }
+
+    .brandSection {
+        width: 100%;
+        height: 30vh;
+        min-height: 200px;
+        padding: 1rem;
+    }
+
+    .formSection {
+        width: 100%;
+        height: 70vh;
+        padding: 1.5rem;
+        overflow-y: auto;
+    }
+
+    .brandLogo {
+        width: 120px;
+        margin-bottom: 0.8rem;
+    }
+
+    .companyName {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .brandTagline {
+        font-size: 1rem;
+    }
+
+    .formContainer {
+        width: 100%;
+        max-width: 450px;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .brandSection {
+        height: 25vh;
+        min-height: 150px;
+    }
+
+    .formSection {
+        height: 75vh;
+        padding: 1.25rem;
+    }
+
+    .brandLogo {
+        width: 100px;
+        margin-bottom: 0.5rem;
+    }
+
+    .companyName {
+        font-size: 1.8rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .brandTagline {
+        font-size: 0.9rem;
+    }
+
+    .formTitle {
+        font-size: 1.5rem;
+    }
+
+    .formSubtitle {
+        font-size: 0.9rem;
+    }
+
+    .inputGroup {
+        margin-bottom: 1rem;
+    }
+
+    .inputGroup label {
+        font-size: 0.9rem;
+    }
+
+    .inputGroup input {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+
+    .button,
+    .googleButton,
+    .guestButton {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+
+    .switchModeButton {
+        font-size: 0.85rem;
+    }
+}
+
+/* Small Mobile (375px and below) */
+@media (max-width: 375px) {
+    .brandSection {
+        height: 22vh;
+        min-height: 130px;
+    }
+
+    .formSection {
+        height: 78vh;
+        padding: 1rem;
+    }
+
+    .brandLogo {
+        width: 80px;
+    }
+
+    .companyName {
+        font-size: 1.6rem;
+    }
+
+    .formTitle {
+        font-size: 1.4rem;
+    }
+
+    .formSubtitle {
+        margin-bottom: 1rem;
+    }
+
+    .alertPopup {
+        font-size: 0.85rem;
+        padding: 10px 14px;
+    }
+}
+
+/* For devices with low height */
+@media (max-height: 600px) {
+    .brandSection {
+        height: 35vh;
+    }
+
+    .formSection {
+        height: 65vh;
+        overflow-y: auto;
+    }
+
+    .inputGroup {
+        margin-bottom: 0.8rem;
+    }
+}
